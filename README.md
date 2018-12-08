@@ -61,3 +61,15 @@ fs后缀名的文件类型，通常是指矢量文件格式
 
 ![cmd-markdown-logo](./pic/3.png)
 
+
+其中使用了GLSL着色语言写的资源
+
+> GLSL - OpenGL Shading Language 也称作 GLslang，是一个以C语言为基础的高阶着色语言。它是由 OpenGL ARB 所建立，提供开发者对绘图管线更多的直接控制，而无需使用汇编语言或硬件规格语言。
+> 已在渲染管线中的顶点（vertex）和片断（fragment）层次中，加入更具弹性的新功能。 达到在这个层次中，使用片断和顶点着色器的可编程性
+
+
+## 为shaders 添加Uniform方法
+
+动态调整颜色
+
+![cmd-markdown-logo](./pic/3.gif)

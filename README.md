@@ -72,6 +72,17 @@ fs后缀名的文件类型，通常是指矢量文件格式
 
 ## 创建资源加载器
 
+### 资源文件类型
+> * shaders 着色器文件 vs fs GLSL编写文件
+> * model 文件 blender 导出的obj文件  加载到mesh中
+
+
+其中obj文件里记录了两类信息 v-->顶点坐标信息 f-->mesh face的信息
+下图为通过 obj加载器 加载blender导出的方块
+
+![cmd-markdown-logo](./pic/7.gif)
+
+
 根据文件路径加载文件资源
 
 

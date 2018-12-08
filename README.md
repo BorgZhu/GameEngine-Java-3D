@@ -25,6 +25,13 @@
 
 添加运算 单位化 四元数乘法
 
+## 编写Vertex 类
 
+3维点结构
 
+## 编写Mesh 
+
+添加顶点 并 绘制
+
+![cmd-markdown-logo](./pic/2.png)
 

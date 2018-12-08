@@ -27,7 +27,7 @@ private float[][] m;
  		{
  			for(int j = 0; j < 4; j++)
  			{
- 				r.set(i, j, m[i][0] * r.get(0, j) +
+ 				res.set(i, j, m[i][0] * r.get(0, j) +
  							m[i][1] * r.get(1, j) +
  							m[i][2] * r.get(2, j) +
  							m[i][3] * r.get(3, j));

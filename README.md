@@ -35,3 +35,29 @@
 
 ![cmd-markdown-logo](./pic/2.png)
 
+
+## 创建资源文件夹res
+
+> * models
+> * shaders --着色器
+> * textures
+
+
+
+### shaders --着色器
+
+fs后缀名的文件类型，通常是指矢量文件格式
+
+
+
+## 创建资源加载器
+
+根据文件路径加载文件资源
+
+
+## 编写 shaders 着色器
+
+为资源着色
+
+![cmd-markdown-logo](./pic/3.png)
+

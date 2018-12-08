@@ -25,6 +25,18 @@
 
 添加运算 单位化 四元数乘法
 
+添加Transorm前要添加好矩阵平移与旋转运算的初始化
+
+### 平移
+![cmd-markdown-logo](./pic/4.png)
+
+![cmd-markdown-logo](./pic/4_1.png)
+
+### 旋转
+
+![cmd-markdown-logo](./pic/5.png)
+
+
 ## 编写Vertex 类
 
 3维点结构
@@ -73,3 +85,12 @@ fs后缀名的文件类型，通常是指矢量文件格式
 动态调整颜色
 
 ![cmd-markdown-logo](./pic/3.gif)
+
+
+## 编写Transorm
+
+> * 平移 Translation
+> * 旋转 Rotation
+
+
+![cmd-markdown-logo](./pic/4.gif)

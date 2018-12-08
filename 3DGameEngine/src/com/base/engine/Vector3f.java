@@ -25,7 +25,7 @@ public class Vector3f {
  		return x * r.getX() + y * r.getY() + z * r.getZ();
  	}
  	
- 	//3维向量 叉积运算
+ 	//3维向量 叉积运算 得到垂直于 这两个向量的第三条向量
  	public Vector3f cross(Vector3f r)
  	{
  		float x_ = y * r.getZ() - z * r.getY();

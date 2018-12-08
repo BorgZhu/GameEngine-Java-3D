@@ -36,6 +36,10 @@
 
 ![cmd-markdown-logo](./pic/5.png)
 
+### 缩放
+
+![cmd-markdown-logo](./pic/6.png)
+
 
 ## 编写Vertex 类
 
@@ -91,6 +95,6 @@ fs后缀名的文件类型，通常是指矢量文件格式
 
 > * 平移 Translation
 > * 旋转 Rotation
+> * 缩放 Scale
 
-
-![cmd-markdown-logo](./pic/4.gif)
+![cmd-markdown-logo](./pic/5.gif)

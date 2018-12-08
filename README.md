@@ -47,9 +47,13 @@
 
 ## 编写Mesh 
 
-添加顶点 并 绘制
+### 添加顶点 并 绘制
 
 ![cmd-markdown-logo](./pic/2.png)
+
+### 添加mesh face 使用基于面渲染 而不是点渲染 减少冗余数据
+
+![cmd-markdown-logo](./pic/6.gif)
 
 
 ## 创建资源文件夹res

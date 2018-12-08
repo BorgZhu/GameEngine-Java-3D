@@ -7,27 +7,32 @@ public class Game {
 	private Mesh mesh;
 	private Shader shader;
 	private Transform transform;
-	
+
 	public Game() {
 		mesh = new Mesh();
 		shader = new Shader();
-		
-		//赋点 做mesh
-		Vertex[] data = new Vertex[] { new Vertex(new Vector3f(-1, -1, 0)), new Vertex(new Vector3f(0, 1, 0)),
-				new Vertex(new Vector3f(1, -1, 0)) };
 
-		mesh.addVertices(data);
-		
+		// 赋点 做mesh
+		Vertex[] vertices = new Vertex[] { new Vertex(new Vector3f(-1, -1, 0)), new Vertex(new Vector3f(0, 1, 0)),
+				new Vertex(new Vector3f(1, -1, 0)), new Vertex(new Vector3f(0, -1, 1)) };
+
+		int[] indices = new int[] { 0, 1, 3,
+									3, 1, 2, 
+									2, 1, 0,
+									0, 2, 3 };
+
+		mesh.addVertices(vertices, indices);
+
 		transform = new Transform();
-		
-		//着色
-		//shader.addVertexShader(ResourceLoader.loadShader("basicVertex.vs"));  //改
+
+		// 着色
+		// shader.addVertexShader(ResourceLoader.loadShader("basicVertex.vs")); //改
 		shader.addVertexShader(ResourceLoader.loadShader("basicVertex1.vs"));
- 		shader.addFragmentShader(ResourceLoader.loadShader("basicFragment.fs"));
- 		shader.compileShader();
-		
- 		//shader.addUniform("uniformFloat");  // -->basicVertex.vs
- 		shader.addUniform("transform");
+		shader.addFragmentShader(ResourceLoader.loadShader("basicFragment.fs"));
+		shader.compileShader();
+
+		// shader.addUniform("uniformFloat"); // -->basicVertex.vs
+		shader.addUniform("transform");
 	}
 
 	public void input() {
@@ -41,19 +46,20 @@ public class Game {
 		if (Input.getMouseUp(1))
 			System.out.println("We've just released right mouse button!");
 	}
+
 	float temp = 0.0f;
- 	
 
 	public void update() {
 		temp += Time.getDelta();
- 		
- 		//shader.setUniformf("uniformFloat", (float)Math.abs(Math.sin(temp)));  //--->basicVertex.vs
-		float sinTemp = (float)Math.sin(temp);
- 		
- 		transform.setTranslation(sinTemp, 0, 0);
- 		transform.setRotation(0, 0, sinTemp * 180);
- 		transform.setScale(sinTemp, sinTemp, sinTemp);
-	
+
+		// shader.setUniformf("uniformFloat", (float)Math.abs(Math.sin(temp)));
+		// //--->basicVertex.vs
+		float sinTemp = (float) Math.sin(temp);
+
+		transform.setTranslation(sinTemp, 0, 0);
+		transform.setRotation(0,sinTemp * 180, 0);
+		//transform.setScale(sinTemp, sinTemp, sinTemp);
+
 	}
 
 	public void render() {

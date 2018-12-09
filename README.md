@@ -41,6 +41,16 @@
 ![cmd-markdown-logo](./pic/6.png)
 
 
+### 透视投影
+
+![cmd-markdown-logo](./pic/7.png)
+
+![cmd-markdown-logo](./pic/8.png)
+
+[透视投影公式证明过程](https://www.cnblogs.com/bluebean/p/5276111.html)
+
+https://www.cnblogs.com/bluebean/p/5276111.html
+
 ## 编写Vertex 类
 
 3维点结构
@@ -111,5 +121,17 @@ fs后缀名的文件类型，通常是指矢量文件格式
 > * 平移 Translation
 > * 旋转 Rotation
 > * 缩放 Scale
+> * 透视投影 perspective projection
 
 ![cmd-markdown-logo](./pic/5.gif)
+
+
+### 透视投影
+
+在添加透视投影前，要在矩阵类（Matrix4f）添加投影的计算方法
+
+> 透视投影是为了获得接近真实三维物体的视觉效果而在二维的纸或者画布平面上绘图或者渲染的一种方法，它也称为透视图。透视投影的绘制必须根据已有的几何规则进行。
+
+![cmd-markdown-logo](./pic/8.jpg)
+
+![cmd-markdown-logo](./pic/8.gif)

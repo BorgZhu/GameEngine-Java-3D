@@ -13,6 +13,14 @@
 添加运算 求模 点积 外积（叉积） 单位化 旋转 向量加减乘除
 
 
+在添加Camera前，要在Vector3f内添加 旋转公式
+
+![cmd-markdown-logo](./pic/10.png)
+
+![cmd-markdown-logo](./pic/11.png)
+
+[三维旋转：欧拉角、四元数、旋转矩阵、轴角之间的转换](https://zhuanlan.zhihu.com/p/45404840)
+
 ## 编写一个Quaternion - 四元数 简化旋转计算
 
 
@@ -49,7 +57,9 @@
 
 [透视投影公式证明过程](https://www.cnblogs.com/bluebean/p/5276111.html)
 
-https://www.cnblogs.com/bluebean/p/5276111.html
+### 世界坐标系向摄像机坐标系转化  --->摄像机矩阵
+
+![cmd-markdown-logo](./pic/9.png)
 
 ## 编写Vertex 类
 
@@ -122,6 +132,8 @@ fs后缀名的文件类型，通常是指矢量文件格式
 > * 旋转 Rotation
 > * 缩放 Scale
 > * 透视投影 perspective projection
+> * 转化到摄像机坐标系 cameraRotation  +  cameraTranslation
+
 
 ![cmd-markdown-logo](./pic/5.gif)
 
@@ -135,3 +147,10 @@ fs后缀名的文件类型，通常是指矢量文件格式
 ![cmd-markdown-logo](./pic/8.jpg)
 
 ![cmd-markdown-logo](./pic/8.gif)
+
+
+## 编写Camera
+
+在添加Camera前，要在矩阵类（Matrix4f）添加转化到摄像机坐标系的的计算方法
+
+![cmd-markdown-logo](./pic/9.gif)

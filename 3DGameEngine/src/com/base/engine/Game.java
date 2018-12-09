@@ -7,11 +7,12 @@ public class Game {
 	private Mesh mesh;
 	private Shader shader;
 	private Transform transform;
+	private Camera camera;
 
 	public Game() {
-		mesh = ResourceLoader.loadMesh("box.obj");
+		mesh = ResourceLoader.loadMesh("monkey.obj");
 		shader = new Shader();
-
+		camera = new Camera();
 //		// 赋点 做mesh
 //		Vertex[] vertices = new Vertex[] { new Vertex(new Vector3f(-1, -1, 0)), new Vertex(new Vector3f(0, 1, 0)),
 //				new Vertex(new Vector3f(1, -1, 0)), new Vertex(new Vector3f(0, -1, 1)) };
@@ -24,7 +25,7 @@ public class Game {
 //		mesh.addVertices(vertices, indices);
 		
 		Transform.setProjection(70f, Window.getWidth(), Window.getHeight(), 0.1f, 1000);
-		
+		Transform.setCamera(camera);
 		transform = new Transform();
 
 		// 着色
@@ -38,15 +39,17 @@ public class Game {
 	}
 
 	public void input() {
-		if (Input.getKeyDown(Input.KEY_UP))
-			System.out.println("We've just pressed up!");
-		if (Input.getKeyUp(Input.KEY_UP))
-			System.out.println("We've just released up!");
-
-		if (Input.getMouseDown(1))
-			System.out.println("We've just right clicked at " + Input.getMousePosition().toString());
-		if (Input.getMouseUp(1))
-			System.out.println("We've just released right mouse button!");
+		
+		camera.input();
+//		if (Input.getKeyDown(Input.KEY_UP))
+//			System.out.println("We've just pressed up!");
+//		if (Input.getKeyUp(Input.KEY_UP))
+//			System.out.println("We've just released up!");
+//
+//		if (Input.getMouseDown(1))
+//			System.out.println("We've just right clicked at " + Input.getMousePosition().toString());
+//		if (Input.getMouseUp(1))
+//			System.out.println("We've just released right mouse button!");
 	}
 
 	float temp = 0.0f;

@@ -155,9 +155,11 @@ fs后缀名的文件类型，通常是指矢量文件格式
 
 ![cmd-markdown-logo](./pic/9.gif)
 
-## 编写Texture
+## 编写Texture 与 Material
 
 用来给模型上材质
 
 ![cmd-markdown-logo](./pic/10.gif)
+
+![cmd-markdown-logo](./pic/11.gif)
 

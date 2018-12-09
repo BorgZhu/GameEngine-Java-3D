@@ -56,8 +56,7 @@ public class Camera {
  		Vector3f Haxis = yAxis.cross(forward);
  		Haxis.normalize();
  		
- 		forward.rotate(angle, yAxis);
- 		forward.normalize();
+		forward = forward.rotate(angle, yAxis).normalize();
  		
  		up = forward.cross(Haxis);
  		up.normalize();
@@ -68,8 +67,7 @@ public class Camera {
  		Vector3f Haxis = yAxis.cross(forward);
  		Haxis.normalize();
  		
- 		forward.rotate(angle, Haxis);
- 		forward.normalize();
+ 		forward = forward.rotate(angle, Haxis).normalize();
  		
  		up = forward.cross(Haxis);
  		up.normalize();

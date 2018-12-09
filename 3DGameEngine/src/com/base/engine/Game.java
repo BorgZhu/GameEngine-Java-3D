@@ -8,21 +8,26 @@ public class Game {
 	private Shader shader;
 	private Transform transform;
 	private Camera camera;
+	private Texture texture;
 
 	public Game() {
-		mesh = ResourceLoader.loadMesh("monkey.obj");
+		//mesh = ResourceLoader.loadMesh("box.obj");
+ 		mesh = new Mesh();
+		texture = ResourceLoader.loadTexture("0.jpg");
 		shader = new Shader();
 		camera = new Camera();
-//		// 赋点 做mesh
-//		Vertex[] vertices = new Vertex[] { new Vertex(new Vector3f(-1, -1, 0)), new Vertex(new Vector3f(0, 1, 0)),
-//				new Vertex(new Vector3f(1, -1, 0)), new Vertex(new Vector3f(0, -1, 1)) };
-//
-//		int[] indices = new int[] { 0, 1, 3,
-//									3, 1, 2, 
-//									2, 1, 0,
-//									0, 2, 3 };
-//
-//		mesh.addVertices(vertices, indices);
+		// 赋点 做mesh
+		Vertex[] vertices = new Vertex[] {new Vertex(new Vector3f(-1,-1,0), new Vector2f(0,0)),
+				  new Vertex(new Vector3f(0,1,0), new Vector2f(0.5f,0)),
+				  new Vertex(new Vector3f(1,-1,0), new Vector2f(1.0f,0)),
+				  new Vertex(new Vector3f(0,-1,1), new Vector2f(0.5f,1.0f))};
+
+		int[] indices = new int[] { 3, 1, 0,
+									2, 1, 3, 
+									0, 1, 2,
+									0, 2, 3 };
+
+		mesh.addVertices(vertices, indices);
 		
 		Transform.setProjection(70f, Window.getWidth(), Window.getHeight(), 0.1f, 1000);
 		Transform.setCamera(camera);
@@ -30,8 +35,8 @@ public class Game {
 
 		// 着色
 		// shader.addVertexShader(ResourceLoader.loadShader("basicVertex.vs")); //改
-		shader.addVertexShader(ResourceLoader.loadShader("basicVertex1.vs"));
-		shader.addFragmentShader(ResourceLoader.loadShader("basicFragment.fs"));
+		shader.addVertexShader(ResourceLoader.loadShader("basicVertex4.vs"));
+		shader.addFragmentShader(ResourceLoader.loadShader("basicFragment4.fs"));
 		shader.compileShader();
 
 		// shader.addUniform("uniformFloat"); // -->basicVertex.vs
@@ -70,6 +75,7 @@ public class Game {
 	public void render() {
 		shader.bind();
 		shader.setUniform("transform", transform.getProjectedTransformation());
+		texture.bind();
 		mesh.draw();
 	}
 }

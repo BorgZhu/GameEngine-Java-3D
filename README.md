@@ -154,3 +154,10 @@ fs后缀名的文件类型，通常是指矢量文件格式
 在添加Camera前，要在矩阵类（Matrix4f）添加转化到摄像机坐标系的的计算方法
 
 ![cmd-markdown-logo](./pic/9.gif)
+
+## 编写Texture
+
+用来给模型上材质
+
+![cmd-markdown-logo](./pic/10.gif)
+

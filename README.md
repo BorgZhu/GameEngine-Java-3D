@@ -191,9 +191,11 @@ fs后缀名的文件类型，通常是指矢量文件格式
 ![cmd-markdown-logo](./pic/13.gif)
 
 
-### 直线光 Directional Light
+### 直线光（平行光） Directional Light
 
 颜色 光强 方向  考虑环境漫反射 diffuse Color 
+
+> 在OPENGL中顶点-三角形模型对光照的反射取决于顶点法向量的设置，如果法向量计算正确，显示出来的模型表面很光滑，有光泽，否则不是棱角分明就是模糊、看不清
 
 漫反射计算公式:
 
@@ -203,8 +205,17 @@ fs后缀名的文件类型，通常是指矢量文件格式
 
 ![cmd-markdown-logo](./pic/14.png)
 
+[漫反射的计算](https://blog.csdn.net/dingd_158/article/details/72912213)
+
 因此在计算之前要考虑计算法线方向 
 
 ![cmd-markdown-logo](./pic/15.png)
 
+![cmd-markdown-logo](./pic/18.png)
+
+[顶点法向量的计算](https://www.cnblogs.com/bluebean/p/5276111.html)
+
+可以明显发现，加入漫反射后，明显材质变光滑和自然许多
+
+![cmd-markdown-logo](./pic/14.gif)
 

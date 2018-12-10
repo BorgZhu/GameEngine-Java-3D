@@ -3,6 +3,11 @@ package com.base.engine;
 public class Material {
 	private Texture texture;
  	private Vector3f color;
+ 	
+	public Material(Texture texture)
+ 	{
+ 		this(texture, new Vector3f(1,1,1));
+ 	}
 	public Material(Texture texture, Vector3f color) {
 		super();
 		this.texture = texture;

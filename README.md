@@ -75,6 +75,14 @@
 
 ![cmd-markdown-logo](./pic/6.gif)
 
+mesh的资源文件有 以vs后缀结尾 与 以 fs结尾 两类 
+在model的obj文件里记录了 v（顶点） 与 f（点的连接顺序）的信息
+
+下面以box.obj为例:
+![cmd-markdown-logo](./pic/17.png)
+
+任意的模型的面都能由 三角形碎片拼接而成（因为三角形不可再分）
+![cmd-markdown-logo](./pic/16.png)
 
 ## 创建资源文件夹res
 
@@ -167,6 +175,7 @@ fs后缀名的文件类型，通常是指矢量文件格式
 ## 添加光源
 
 > * 环境光 ambient light
+> * 直线光（平行光） Directional Light  会产生漫反射
 
 
 ### 环境光 ambient light
@@ -180,4 +189,22 @@ fs后缀名的文件类型，通常是指矢量文件格式
 
 
 ![cmd-markdown-logo](./pic/13.gif)
+
+
+### 直线光 Directional Light
+
+颜色 光强 方向  考虑环境漫反射 diffuse Color 
+
+漫反射计算公式:
+
+![cmd-markdown-logo](./pic/12.png)
+
+![cmd-markdown-logo](./pic/13.png)
+
+![cmd-markdown-logo](./pic/14.png)
+
+因此在计算之前要考虑计算法线方向 
+
+![cmd-markdown-logo](./pic/15.png)
+
 

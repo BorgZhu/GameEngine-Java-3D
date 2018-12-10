@@ -163,3 +163,21 @@ fs后缀名的文件类型，通常是指矢量文件格式
 
 ![cmd-markdown-logo](./pic/11.gif)
 
+
+## 添加光源
+
+> * 环境光 ambient light
+
+
+### 环境光 ambient light
+
+下图为将环境光亮值设置为0.1 Vector3f(0.1f,0.1f,0.1f)); 让周围环境变暗
+
+
+![cmd-markdown-logo](./pic/12.gif)
+
+下图为将环境光亮值设置为10 Vector3f(10f,10f,10f)); 让周围环境变亮
+
+
+![cmd-markdown-logo](./pic/13.gif)
+

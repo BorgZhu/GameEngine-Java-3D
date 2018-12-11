@@ -15,14 +15,19 @@ private static final PhongShader instance = new PhongShader();
  	{
  		super();
  		
- 		addVertexShader(ResourceLoader.loadShader("phongVertex1.vs"));
- 		addFragmentShader(ResourceLoader.loadShader("phongFragment1.fs"));
+ 		addVertexShader(ResourceLoader.loadShader("phongVertex2.vs"));
+ 		addFragmentShader(ResourceLoader.loadShader("phongFragment2.fs"));
  		compileShader();
  		
  		addUniform("transform");
  		addUniform("transformProjected");
  		addUniform("baseColor");
  		addUniform("ambientLight");
+ 		
+		addUniform("specularIntensity");
+ 		addUniform("specularPower");
+ 		addUniform("eyePos");
+
  		
  		
 		addUniform("directionalLight.base.color");
@@ -40,8 +45,14 @@ private static final PhongShader instance = new PhongShader();
  		setUniform("transformProjected", projectedMatrix);
  		setUniform("transform", worldMatrix);
  		setUniform("baseColor", material.getColor());
+ 		
  		setUniform("ambientLight", ambientLight);
  		setUniform("directionalLight", directionalLight);
+ 		
+		setUniformf("specularIntensity", material.getSpecularIntensity());
+ 		setUniformf("specularPower", material.getSpecularPower());
+ 		
+ 		setUniform("eyePos", Transform.getCamera().getPos());
  		
  	}
  	

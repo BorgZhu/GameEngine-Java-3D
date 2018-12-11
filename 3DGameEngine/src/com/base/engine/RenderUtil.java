@@ -73,9 +73,9 @@ public class RenderUtil {
  		glEnable(GL_CULL_FACE);
  		glEnable(GL_DEPTH_TEST);
  		
- 		//TODO: Depth clamp for later
+		glEnable(GL_DEPTH_CLAMP);
  		
- 		glEnable(GL_FRAMEBUFFER_SRGB);
+ 		glEnable(GL_TEXTURE_2D);
  	}
  	
 	public static String getOpenGLVersion()

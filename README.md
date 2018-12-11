@@ -176,7 +176,7 @@ fs后缀名的文件类型，通常是指矢量文件格式
 
 > * 环境光 ambient light
 > * 直线光（平行光） Directional Light  会产生漫反射
-
+> * 点光源 point light
 
 ### 环境光 ambient light
 
@@ -235,4 +235,14 @@ fs后缀名的文件类型，通常是指矢量文件格式
 
 可以明显发现，加入镜面反射后，明显材质变更加光滑和自然许多 还可以看到反光
 
+
+### 点光源 point light Attenuation
+
+点光源衰减公式  因此在计算前要设计好  衰减类
+
+![cmd-markdown-logo](./pic/20.png)
+
+点光源在下图中
+
+![cmd-markdown-logo](./pic/16.gif)
 

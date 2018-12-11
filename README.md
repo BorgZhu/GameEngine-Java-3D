@@ -97,6 +97,13 @@ mesh的资源文件有 以vs后缀结尾 与 以 fs结尾 两类
 fs后缀名的文件类型，通常是指矢量文件格式
 
 
+### textures 纹理
+
+为平面加入纹理：
+
+![cmd-markdown-logo](./pic/25.png)
+
+
 
 ## 创建资源加载器
 
@@ -177,6 +184,7 @@ fs后缀名的文件类型，通常是指矢量文件格式
 > * 环境光 ambient light
 > * 直线光（平行光） Directional Light  会产生漫反射
 > * 点光源 point light
+> * 聚光灯 spot light
 
 ### 环境光 ambient light
 
@@ -240,9 +248,30 @@ fs后缀名的文件类型，通常是指矢量文件格式
 
 点光源衰减公式  因此在计算前要设计好  衰减类
 
-![cmd-markdown-logo](./pic/20.png)
+![cmd-markdown-logo](./pic/21.png)
 
 点光源在下图中
 
 ![cmd-markdown-logo](./pic/16.gif)
+
+
+### 聚光灯 spot light
+
+![cmd-markdown-logo](./pic/22.png)
+
+![cmd-markdown-logo](./pic/23.png)
+
+#### 聚光公式:
+
+![cmd-markdown-logo](./pic/24.png)
+
+[聚光公式推导说明](http://wiki.jikexueyuan.com/project/modern-opengl-tutorial/tutorial21.html)
+
+
+cutoff是一个0-1的数
+
+加入聚光灯：
+
+![cmd-markdown-logo](./pic/17.gif)
+
 

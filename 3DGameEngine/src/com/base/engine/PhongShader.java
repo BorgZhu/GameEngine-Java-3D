@@ -25,8 +25,11 @@ private static final PhongShader instance = new PhongShader();
  	{
  		super();
  		
- 		addVertexShader(ResourceLoader.loadShader("phongVertex4.vs"));
- 		addFragmentShader(ResourceLoader.loadShader("phongFragment4.fs"));
+ 		//addVertexShader(ResourceLoader.loadShader("phongVertex4.vs"));
+ 		//addFragmentShader(ResourceLoader.loadShader("phongFragment4.fs"));
+ 		addVertexShaderFromFile("phongVertex4.vs");
+ 		addFragmentShaderFromFile("phongFragment4.fs");
+ 		
  		compileShader();
  		
  		addUniform("transform");

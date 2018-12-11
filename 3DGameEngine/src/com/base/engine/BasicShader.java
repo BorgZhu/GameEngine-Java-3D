@@ -13,8 +13,9 @@ private static final BasicShader instance = new BasicShader();
  	{
  		super();
  		
- 		addVertexShader(ResourceLoader.loadShader("basicVertex5.vs"));
- 		addFragmentShader(ResourceLoader.loadShader("basicFragment5.fs"));
+ 		
+		addVertexShaderFromFile("basicVertex5.vs");
+ 		addFragmentShaderFromFile("basicFragment5.fs");
  		compileShader();
  		
  		addUniform("transform");
